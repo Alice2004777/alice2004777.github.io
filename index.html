@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://tone.affomelody.com/NRBc7G">
-  </head>
-  <body>
-    <p>Redirecting to <a href="https://tone.affomelody.com/NRBc7G">target page</a>...</p>
-  </body>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<script>
+window.onload = function() {
+  const target = "https://example.com"; // ← сюда вставь свой лендинг
+  const intent = `intent://${target.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=com.android.chrome;end`;
+  window.location.href = intent;
+  setTimeout(() => {
+    window.location.href = target; // fallback, если intent не сработает
+  }, 1500);
+};
+</script>
+</head>
+<body>
+<p>Открываю ссылку...</p>
+</body>
 </html>
